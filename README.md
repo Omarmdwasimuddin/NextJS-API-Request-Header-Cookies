@@ -29,6 +29,7 @@ export async function GET(request:Request) {
 #### Add: cookie & Set: Value
 ![](https://imgur.com/XZyh0kY.png)
 ---
+
 ![](https://imgur.com/K6BpLxl.png)
 ```bash
 import { cookies } from "next/headers";
@@ -48,6 +49,7 @@ export async function GET(request:Request) {
 ```
 ---
 
+### response particular part: value or name or path
 ![](https://imgur.com/Eivl9Ov.png)
 ```bash
 import { cookies } from "next/headers";
