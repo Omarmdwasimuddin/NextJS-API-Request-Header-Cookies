@@ -22,10 +22,11 @@ export async function GET(request:Request) {
 ---
 
 ### Cookies
+#### Click: cookies
 ![](https://imgur.com/xFC0Esv.png)
-
+#### Add: Domain
 ![](https://imgur.com/DV1OeGs.png)
-
+#### Add: cookie & Set: Value
 ![](https://imgur.com/XZyh0kY.png)
 
 ```bash
