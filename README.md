@@ -5,10 +5,10 @@
 
 ```bash
 import { headers } from "next/headers";
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
 
-export async function GET(request:Request) {
+export async function GET(request:NextRequest) {
 
     const headerList = headers();
     const apiKey = (await headerList).get('api-key');
@@ -34,10 +34,10 @@ export async function GET(request:Request) {
 ![](https://imgur.com/K6BpLxl.png)
 ```bash
 import { cookies } from "next/headers";
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
 
-export async function GET(request:Request) {
+export async function GET(request:NextRequest) {
 
     const cookieStore =await cookies();
     const tokenValue = cookieStore.get('token')
@@ -54,10 +54,10 @@ export async function GET(request:Request) {
 ![](https://imgur.com/Eivl9Ov.png)
 ```bash
 import { cookies } from "next/headers";
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
 
-export async function GET(request:Request) {
+export async function GET(request:NextRequest) {
 
     const cookieStore =await cookies();
     const tokenValue = cookieStore.get('token')?.value
