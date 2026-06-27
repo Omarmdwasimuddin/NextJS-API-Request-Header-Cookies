@@ -33,17 +33,15 @@ export async function GET(request:NextRequest) {
 
 ![](https://imgur.com/K6BpLxl.png)
 ```bash
-import { cookies } from "next/headers";
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse, NextRequest } from "next/server";
 
 
 export async function GET(request:NextRequest) {
 
-    const cookieStore =await cookies();
-    const tokenValue = cookieStore.get('token')
+    const token = request.cookies.get('token');
     
     return NextResponse.json(
-        {status: "Success response", message: tokenValue},
+        {status: "success", message: token},
         {status: 200}
     )
 }
